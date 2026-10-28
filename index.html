@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adi Wiraguna | Curriculum Vitae</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/hero.css" rel="stylesheet">
+  <link href="css/halaman.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- MENU: bilah gelap dengan label putih (sama di semua halaman) -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-pill">
+  <div class="container nav-shell">
+    <a class="nav-brand-chip" href="index.html" aria-label="Beranda">
+      <span class="brand-mark">A</span>
+      <span class="brand-text">Adi Wiraguna</span>
+    </a>
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Buka menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="pendidikan.html">Pendidikan</a></li>
+        <li class="nav-item"><a class="nav-link" href="keahlian.html">Keahlian</a></li>
+        <li class="nav-item"><a class="nav-link" href="proyek.html">Proyek</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- BANNER / HERO -->
+<header class="hero-intro" id="beranda">
+
+  <div class="hero-stage">
+    <!-- Latar gelap melengkung -->
+    <div class="hero-dark"></div>
+
+    <!-- Nama besar yang bergerak (dekoratif, disembunyikan dari pembaca layar) -->
+    <div class="hero-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>Adi Wiraguna</span><span>Adi Wiraguna</span><span>Adi Wiraguna</span><span>Adi Wiraguna</span>
+        </div>
+        <div class="marquee-group">
+          <span>Adi Wiraguna</span><span>Adi Wiraguna</span><span>Adi Wiraguna</span><span>Adi Wiraguna</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Foto: gunakan PNG dengan latar transparan agar nama terlihat di belakang -->
+    <img class="hero-photo" src="adi.png" alt="Foto profil Adi Wiraguna">
+  </div>
+
+  <!-- Perkenalan singkat -->
+  <div class="hero-info">
+    <div class="container">
+      <div class="hero-info-box">
+        <p class="hero-kicker">Halo, saya</p>
+        <h1 class="h2 fw-bold">Adi Wiraguna</h1>
+        <p class="lead mt-2">Mahasiswa sistem informasi yang tertarik pada pengembangan web dan desain antarmuka.</p>
+        <a href="kontak.html" class="btn btn-teal me-2 mt-2">Hubungi saya</a>
+        <a href="proyek.html" class="btn btn-outline-dark mt-2">Lihat proyek</a>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<!-- JELAJAHI: pintu masuk ke halaman lain -->
+<section class="bg-sand">
+  <div class="container">
+    <h2 class="sec-title">Jelajahi CV saya</h2>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <a href="pendidikan.html" class="card nav-card h-100">
+          <div class="card-body">
+            <h3 class="h5 mt-2">Pendidikan &amp; Pengalaman</h3>
+            <p class="text-secondary mb-0">Riwayat sekolah, kuliah, dan usaha yang pernah dijalankan.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <a href="keahlian.html" class="card nav-card h-100">
+          <div class="card-body">
+            <h3 class="h5 mt-2">Keahlian</h3>
+            <p class="text-secondary mb-0">Kemampuan teknis dan non teknis.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <a href="proyek.html" class="card nav-card h-100">
+          <div class="card-body">
+            <h3 class="h5 mt-2">Proyek</h3>
+            <p class="text-secondary mb-0">Karya yang pernah saya kerjakan beserta detailnya.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <a href="kontak.html" class="card nav-card h-100">
+          <div class="card-body">
+            <h3 class="h5 mt-2">Kontak</h3>
+            <p class="text-secondary mb-0">Kirim pesan atau hubungi saya langsung.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container text-center">
+    <small>&copy; 2026 Adi Wiraguna. Dibuat dengan Bootstrap 5.</small>
+  </div>
+</footer>
+
+<!-- Tombol kembali ke atas -->
+<a href="#" class="to-top" aria-label="Kembali ke atas"><i class="bi bi-arrow-up"></i></a>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

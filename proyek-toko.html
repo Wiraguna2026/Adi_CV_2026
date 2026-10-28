@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toko Ikan Hias Online Sederhana | Adi Wiraguna</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/halaman.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- MENU: bilah gelap dengan label putih (sama di semua halaman) -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-pill">
+  <div class="container nav-shell">
+    <a class="nav-brand-chip" href="index.html" aria-label="Beranda">
+      <span class="brand-mark">A</span>
+      <span class="brand-text">Adi Wiraguna</span>
+    </a>
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Buka menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="pendidikan.html">Pendidikan</a></li>
+        <li class="nav-item"><a class="nav-link" href="keahlian.html">Keahlian</a></li>
+        <li class="nav-item"><a class="nav-link" href="proyek.html">Proyek</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- JUDUL PROYEK -->
+<header class="hero detail-hero">
+  <div class="container">
+    <p class="year mb-2">Detail proyek</p>
+    <h1 class="display-5 fw-bold">Toko Ikan Hias Online Sederhana</h1>
+    <p class="lead mt-3">Website toko ikan hias dengan katalog pemilihan ikan dan keranjang belanja.</p>
+    <div class="d-flex flex-wrap gap-2 mt-3">
+      <span class="badge text-bg-light fs-6 fw-normal">PHP</span>
+      <span class="badge text-bg-light fs-6 fw-normal">MySQL</span>
+      <span class="badge text-bg-light fs-6 fw-normal">HTML</span>
+      <span class="badge text-bg-light fs-6 fw-normal">CSS</span>
+      <span class="badge text-bg-light fs-6 fw-normal">Bootstrap</span>
+    </div>
+  </div>
+</header>
+
+<!-- DESKRIPSI -->
+<section>
+  <div class="container">
+    <h2 class="sec-title">Tentang proyek</h2>
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <p class="fs-5">Website ini dibuat agar pembeli dapat melihat dan memilih ikan hias secara online. Pembeli menelusuri katalog, memasukkan ikan yang diinginkan ke keranjang, lalu melanjutkan pemesanan. Data produk dan pesanan disimpan di database MySQL.</p>
+      </div>
+      <div class="col-lg-5">
+        <h3 class="h5 skill-group">Peran saya</h3>
+        <p class="text-secondary">Merancang tampilan website, menyusun struktur database, dan membuat program menggunakan PHP.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FITUR -->
+<section class="bg-sand">
+  <div class="container">
+    <h2 class="sec-title">Fitur utama</h2>
+    <ul class="skill-list">
+      <li class="skill-item">
+        <h4 class="skill-name">Katalog ikan hias</h4>
+        <p class="skill-desc">Menampilkan daftar ikan hias lengkap dengan gambar, nama, dan harga agar pembeli mudah memilih.</p>
+      </li>
+      <li class="skill-item">
+        <h4 class="skill-name">Keranjang belanja</h4>
+        <p class="skill-desc">Pembeli dapat menambah, mengurangi, dan menghapus ikan di keranjang sebelum memesan.</p>
+      </li>
+      <li class="skill-item">
+        <h4 class="skill-name">Penyimpanan data</h4>
+        <p class="skill-desc">Data produk dan pesanan tersimpan rapi di database MySQL.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- DOKUMENTASI -->
+<section>
+  <div class="container">
+    <h2 class="sec-title">Dokumentasi</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <figure class="mb-0">
+          <img src="img/proyek/toko-1.jpg" class="detail-img" alt="Halaman katalog ikan hias">
+          <figcaption class="text-secondary small mt-2">Halaman katalog ikan hias</figcaption>
+        </figure>
+      </div>
+      <div class="col-md-6">
+        <figure class="mb-0">
+          <img src="img/proyek/toko-2.jpg" class="detail-img" alt="Halaman keranjang belanja">
+          <figcaption class="text-secondary small mt-2">Halaman keranjang belanja</figcaption>
+        </figure>
+      </div>
+    </div>
+    <a href="proyek.html" class="btn btn-teal mt-5">Kembali ke proyek</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container text-center">
+    <small>&copy; 2026 Adi Wiraguna. Dibuat dengan Bootstrap 5.</small>
+  </div>
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontak | Adi Wiraguna</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/halaman.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- MENU: bilah gelap dengan label putih (sama di semua halaman) -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-pill">
+  <div class="container nav-shell">
+    <a class="nav-brand-chip" href="index.html" aria-label="Beranda">
+      <span class="brand-mark">A</span>
+      <span class="brand-text">Adi Wiraguna</span>
+    </a>
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Buka menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="pendidikan.html">Pendidikan</a></li>
+        <li class="nav-item"><a class="nav-link" href="keahlian.html">Keahlian</a></li>
+        <li class="nav-item"><a class="nav-link" href="proyek.html">Proyek</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- JUDUL HALAMAN -->
+<header class="hero detail-hero">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Kontak</h1>
+    <p class="lead mt-3">Tertarik bekerja sama atau ingin bertanya? Hubungi saya.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <p class="fs-5">Kirim pesan lewat formulir atau hubungi saya langsung.</p>
+        <a class="btn btn-outline-dark me-2 mb-2" href="https://github.com/username" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-outline-dark me-2 mb-2" href="https://linkedin.com/in/adi wiraguna" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-outline-dark mb-2" href="https://instagram.com/adi.wiraguna.3388" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="col-lg-7">
+        <form action="mailto:nama@email.com" method="post" enctype="text/plain">
+          <div class="mb-3">
+            <label for="nama" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="nama" name="nama" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="pesan" class="form-label">Pesan</label>
+            <textarea class="form-control" id="pesan" name="pesan" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-teal">Kirim pesan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container text-center">
+    <small>&copy; 2026 Adi Wiraguna. Dibuat dengan Bootstrap 5.</small>
+  </div>
+</footer>
+
+<!-- Tombol kembali ke atas -->
+<a href="#" class="to-top" aria-label="Kembali ke atas"><i class="bi bi-arrow-up"></i></a>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

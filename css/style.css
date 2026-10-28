@@ -1,0 +1,51 @@
+:root{
+  --ink:#30343e; --teal:#0f766e; --sand:#f5efe6; --paper:#ffffff; --muted:#4474cd;
+}
+body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:var(--paper);scroll-behavior:smooth}
+h1,h2,h3,.brand{font-family:'Fraunces',Georgia,serif}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+.navbar{background:var(--ink)}
+.navbar .nav-link{color:#dbe3f0}
+.navbar .nav-link:hover,.navbar .nav-link:focus{color:#fff}
+.hero{background:var(--ink);color:#fff;padding:5rem 0 4rem}
+.hero .lead{color:#c7d2e6;max-width:34rem}
+.avatar{width:240px;height:240px;border-radius:50%;object-fit:cover;border:6px solid var(--teal);background:var(--sand)}
+.btn-teal{background:var(--teal);color:#fff;border:0}
+.btn-teal:hover{background:#0b5f58;color:#fff}
+section{padding:4rem 0}
+.bg-sand{background:var(--sand)}
+.sec-title{font-weight:700;margin-bottom:2rem}
+.timeline{border-left:3px solid var(--teal);padding-left:1.5rem}
+.timeline .item{position:relative;margin-bottom:1.75rem}
+.timeline .item::before{content:"";position:absolute;left:-1.95rem;top:.4rem;width:14px;height:14px;border-radius:50%;background:var(--teal)}
+.year{color:var(--teal);font-weight:600}
+.progress{height:10px;background:#d9dfe8}
+.progress-bar{background:var(--teal)}
+.card{border:1px solid #e2e6ee;border-radius:.5rem}
+footer{background:var(--ink);color:#aeb9cf;padding:1.5rem 0}
+a:focus-visible,button:focus-visible{outline:3px solid #f4b942;outline-offset:2px}
+.skill-group{font-family:'Fraunces',Georgia,serif;color:var(--teal);font-weight:700;font-size:1.35rem;margin-bottom:1.25rem}
+.skill-list{list-style:none;padding:0;margin:0 0 2.5rem;max-width:44rem}
+.skill-item{border-left:3px solid var(--teal);padding:.35rem 0 .35rem 1.25rem;margin-bottom:1.25rem}
+.skill-name{font-family:'Fraunces',Georgia,serif;font-size:1.2rem;font-weight:600;color:var(--ink);margin:0 0 .25rem}
+.skill-desc{font-size:1.05rem;line-height:1.6;color:var(--muted);margin:0}
+
+/* Menu aktif */
+.navbar .nav-link{padding:.5rem .9rem;border-bottom:2px solid transparent}
+.navbar .nav-link.active{color:#fff;border-bottom-color:#2dd4bf}
+
+/* Tombol kembali ke atas */
+.to-top{
+  position:fixed;left:1.25rem;bottom:1.25rem;z-index:1030;
+  width:46px;height:46px;border-radius:50%;
+  background:var(--teal);color:#fff;font-size:1.3rem;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.25);
+  opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s
+}
+.to-top.show{opacity:1;visibility:visible}
+.to-top:hover{background:#0b5f58;color:#fff}
+
+/* Gambar dokumentasi proyek */
+.proyek-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--sand)}
+.card{overflow:hidden}

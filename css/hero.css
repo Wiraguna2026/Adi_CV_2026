@@ -1,0 +1,101 @@
+/* ==========================================================
+   HERO PENGENALAN: nama besar bergerak di belakang foto
+   ========================================================== */
+.hero-intro{
+  position:relative;
+  background:#e4e7ec;           /* sisi kiri yang terang */
+  color:var(--ink);
+}
+
+/* Panggung: tempat latar, teks bergerak, dan foto bertumpuk */
+.hero-stage{
+  position:relative;
+  isolation:isolate;            /* agar efek blend hanya berlaku di dalam panggung */
+  height:100vh;
+  min-height:620px;
+  overflow:hidden;
+}
+
+/* Sisi gelap dengan tepi melengkung */
+.hero-dark{
+  position:absolute;
+  top:-10%;bottom:-10%;right:0;
+  width:68%;
+  background:#0b1220;
+  border-radius:50% 0 0 50% / 50% 0 0 50%;
+  z-index:0;
+}
+
+/* Teks nama (hanya garis tepi) yang berjalan terus */
+.hero-marquee{
+  position:absolute;
+  left:0;right:0;top:50%;
+  transform:translateY(-50%);
+  overflow:hidden;
+  z-index:1;
+  pointer-events:none;
+  mix-blend-mode:difference;    /* garis jadi gelap di sisi terang, terang di sisi gelap */
+}
+.marquee-track{
+  display:flex;
+  width:max-content;
+  animation:marquee 30s linear infinite;
+}
+.marquee-group{display:flex;flex-shrink:0}
+.marquee-group span{
+  font-family:'Fraunces',Georgia,serif;
+  font-weight:700;
+  font-size:clamp(6rem,17vw,15rem);
+  line-height:1;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  padding-right:.6em;
+  color:transparent;
+  -webkit-text-stroke:2px #fff;
+}
+@keyframes marquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+
+/* Foto (harus PNG dengan latar transparan) berada di depan teks */
+.hero-photo{
+  position:absolute;
+  bottom:0;left:62%;
+  transform:translateX(-50%);
+  height:90%;width:auto;max-width:none;
+  object-fit:contain;
+  z-index:2;
+  filter:drop-shadow(0 12px 30px rgba(0,0,0,.35));
+}
+
+/* Perkenalan singkat + tombol (sisi kiri) */
+.hero-info{
+  position:absolute;
+  left:0;right:0;bottom:3.5rem;
+  z-index:3;
+  pointer-events:none;
+}
+.hero-info .hero-info-box{max-width:min(24rem,30vw);pointer-events:auto}
+.hero-info .hero-kicker{color:var(--teal);font-weight:600;margin-bottom:.25rem}
+.hero-info .lead{color:var(--muted);font-size:1.15rem}
+
+/* Layar kecil: tumpuk ke bawah, semua berlatar gelap */
+@media (max-width:991.98px){
+  .hero-intro{background:var(--ink)}
+  .hero-stage{height:62vh;min-height:380px}
+  .hero-dark{top:0;bottom:0;width:100%;border-radius:0}
+  .hero-photo{left:50%;height:94%}
+  .hero-info{position:static;padding:1.75rem 0 3rem;background:var(--ink);color:#fff}
+  .hero-info .hero-info-box{max-width:none}
+  .hero-info .hero-kicker{color:#5eead4}
+  .hero-info .lead{color:#c7d2e6}
+  .hero-info .btn-outline-dark{color:#fff;border-color:#fff}
+  .hero-info .btn-outline-dark:hover{background:#fff;color:var(--ink)}
+}
+
+/* Hormati pengguna yang mematikan animasi di perangkatnya */
+@media (prefers-reduced-motion:reduce){
+  .marquee-track{animation:none}
+}
