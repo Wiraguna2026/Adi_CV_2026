@@ -34,19 +34,28 @@
   </div>
 </nav>
 
-<!-- JUDUL PROYEK -->
-<header class="hero detail-hero">
+<!-- JUDUL PROYEK (dengan video latar) -->
+<header class="hero detail-hero hero-video">
+  <!-- Video latar: taruh file di folder video/ dengan nama toko.mp4 -->
+  <video class="hero-video-bg" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="video/toko.mp4" type="video/mp4">
+  </video>
+  <div class="hero-video-overlay"></div>
+
   <div class="container">
     <p class="year mb-2">Detail proyek</p>
     <h1 class="display-5 fw-bold">Toko Ikan Hias Online Sederhana</h1>
     <p class="lead mt-3">Membuat usaha penjualan ikan hias dengan pemasaran online dengan target penjualan ke berbagai penjuru negara</p>
     <div class="d-flex flex-wrap gap-2 mt-3">
-      <span class="badge text-bg-light fs-6 fw-normal">Facebook</span>
-      <span class="badge text-bg-light fs-6 fw-normal">Instagram</span>
-      <span class="badge text-bg-light fs-6 fw-normal">Whatshaap</span>
+      <div class="col-lg-5">
+        <p class="fs-5">Kirim pesan lewat formulir atau hubungi saya langsung.</p>
+        <a class="btn btn-outline-dark me-2 mb-2" href="https://www.facebook.com/in/Nova-Bettafish" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-outline-dark mb-2" href="https://instagram.com/nova.bettafish" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
   </div>
 </header>
+
 
 <!-- DESKRIPSI -->
 <section>

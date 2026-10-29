@@ -148,3 +148,12 @@ if (toTop) {
     if (e.key === 'Escape') tutup();
   });
 })();
+
+// ===== Video latar: berhenti otomatis jika pengguna mematikan animasi di perangkatnya =====
+(function () {
+  var videos = document.querySelectorAll('.hero-video-bg');
+  if (!videos.length || !window.matchMedia) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    videos.forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
+  }
+})();
