@@ -100,3 +100,25 @@ body,.bg-sand,.card,.form-control{transition:background-color .25s,color .25s,bo
   [data-theme="dark"] .hero-intro,
   [data-theme="dark"] .hero-info{background:#05080f}
 }
+
+/* ===== Galeri dokumentasi: menyesuaikan otomatis jumlah & ukuran foto ===== */
+.galeri{column-width:280px;column-gap:1.5rem}
+.galeri figure{break-inside:avoid;margin:0 0 1.5rem}
+.galeri img{
+  width:100%;height:auto;display:block;
+  border-radius:.5rem;border:1px solid #e2e6ee;background:var(--sand);
+  cursor:zoom-in;transition:transform .2s,box-shadow .2s;
+}
+.galeri img:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(20,33,61,.15)}
+[data-theme="dark"] .galeri img{border-color:#2c3852}
+
+/* Tampilan foto diperbesar saat diklik */
+.lightbox{
+  position:fixed;inset:0;z-index:2000;
+  background:rgba(5,8,15,.92);
+  display:flex;align-items:center;justify-content:center;
+  padding:1.5rem;cursor:zoom-out;
+}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:100%;max-height:100%;border-radius:.5rem;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.lightbox button{position:absolute;top:1rem;right:1.25rem;background:none;border:0;color:#fff;font-size:2.25rem;line-height:1;cursor:pointer}

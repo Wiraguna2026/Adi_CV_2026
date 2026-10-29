@@ -77,3 +77,74 @@ if (toTop) {
     try { localStorage.setItem('tema', baru); } catch (e) {}
   });
 })();
+
+// ===== Galeri dokumentasi otomatis =====
+// Foto bernomor (koperasi-1.jpg, koperasi-2.jpg, ...) dideteksi sendiri; berhenti di nomor pertama yang tidak ada.
+(function () {
+  var galeri = document.querySelector('.galeri[data-prefix]');
+  if (!galeri) return;
+
+  var folder = galeri.getAttribute('data-folder') || 'img/proyek/';
+  var prefix = galeri.getAttribute('data-prefix');
+  var max = parseInt(galeri.getAttribute('data-max') || '20', 10);
+  var keterangan = (galeri.getAttribute('data-keterangan') || '').split('|');
+  var kosong = document.querySelector('.galeri-kosong');
+  var exts = ['jpg', 'jpeg', 'png', 'webp', 'JPG', 'JPEG', 'PNG'];
+  var jumlah = 0;
+
+  function selesai() {
+    if (jumlah === 0 && kosong) { kosong.hidden = false; }
+  }
+
+  function tambah(img, nomor) {
+    var fig = document.createElement('figure');
+    img.alt = (keterangan[nomor - 1] || 'Dokumentasi ' + nomor).trim();
+    fig.appendChild(img);
+    if (keterangan[nomor - 1]) {
+      var cap = document.createElement('figcaption');
+      cap.className = 'text-secondary small mt-2';
+      cap.textContent = keterangan[nomor - 1].trim();
+      fig.appendChild(cap);
+    }
+    galeri.appendChild(fig);
+    jumlah++;
+  }
+
+  function coba(nomor, e) {
+    if (nomor > max || e >= exts.length) { return selesai(); }
+    var img = new Image();
+    img.onload = function () { tambah(img, nomor); coba(nomor + 1, 0); };
+    img.onerror = function () { coba(nomor, e + 1); };
+    img.src = folder + prefix + nomor + '.' + exts[e];
+  }
+
+  coba(1, 0);
+})();
+
+// ===== Foto diperbesar saat diklik =====
+(function () {
+  var overlay = document.createElement('div');
+  overlay.className = 'lightbox';
+  overlay.hidden = true;
+  overlay.innerHTML = '<img alt=""><button type="button" aria-label="Tutup">&times;</button>';
+  document.body.appendChild(overlay);
+  var gambar = overlay.querySelector('img');
+
+  function tutup() {
+    overlay.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', function (e) {
+    var img = e.target.closest ? e.target.closest('.galeri img') : null;
+    if (!img) return;
+    gambar.src = img.src;
+    gambar.alt = img.alt;
+    overlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+  });
+  overlay.addEventListener('click', tutup);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') tutup();
+  });
+})();
