@@ -1,0 +1,144 @@
+/* Kartu menuju halaman lain di Beranda */
+.nav-card{display:block;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s,border-color .2s}
+.nav-card:hover,.nav-card:focus-visible{transform:translateY(-4px);box-shadow:0 8px 20px rgba(20,33,61,.12);border-color:var(--teal);color:inherit}
+.nav-card .bi{color:var(--teal);font-size:1.75rem}
+
+/* ===== Menu: bilah gelap + label putih di kiri ===== */
+.navbar.nav-pill{background:transparent;padding:.9rem 0}
+.nav-pill .nav-shell{
+  position:relative;
+  background:rgba(14,20,33,.88);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:1rem;
+  padding:0 .75rem 0 0;
+  overflow:hidden;
+  align-items:stretch;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+}
+
+/* Label putih berisi logo + nama */
+.nav-brand-chip{
+  display:flex;align-items:center;gap:.7rem;
+  background:#fff;color:var(--ink);text-decoration:none;
+  padding:.65rem 1.1rem .65rem .85rem;
+  border-radius:0 .9rem .9rem 0;
+}
+.nav-brand-chip:hover{color:var(--ink)}
+.brand-mark{
+  width:34px;height:34px;border-radius:.6rem;
+  background:#0b1220;color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:700;font-size:1.15rem;
+}
+.brand-text{font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* Menu: huruf kapital kecil, renggang, abu-abu */
+.nav-pill .nav-link{
+  color:#aab2c3;font-size:.78rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  padding:.5rem 1rem;border:0;border-radius:0;
+}
+.nav-pill .nav-link:hover,.nav-pill .nav-link:focus{color:#fff}
+.nav-pill .nav-link.active{color:#fff;background:transparent;box-shadow:inset 0 -2px 0 #2dd4bf}
+
+/* Layar kecil: tombol menu di kanan, daftar menu terbuka di dalam bilah */
+.nav-pill .navbar-toggler{align-self:center;margin:.5rem 0;border-color:rgba(255,255,255,.25)}
+.nav-pill .navbar-collapse{padding:.25rem 1rem .75rem;border-top:1px solid rgba(255,255,255,.1)}
+
+/* Layar lebar: menu tepat di tengah bilah */
+@media (min-width:992px){
+  .nav-pill .nav-shell{min-height:58px}
+  .nav-pill .navbar-collapse{
+    position:absolute;left:50%;top:0;bottom:0;
+    transform:translateX(-50%);
+    flex-grow:0;align-items:center;
+    padding:0;border-top:0;
+  }
+}
+@media (min-width:992px) and (max-width:1199.98px){
+  .nav-pill .nav-link{padding:.5rem .7rem;letter-spacing:.1em}
+}
+
+/* ===== Tombol ganti mode (disisipkan otomatis oleh script.js) ===== */
+.theme-toggle{
+  align-self:center;display:inline-flex;align-items:center;justify-content:center;
+  width:38px;height:38px;margin-right:.5rem;border-radius:50%;
+  background:transparent;border:1px solid rgba(255,255,255,.2);color:#cfd6e4;cursor:pointer;
+  transition:color .2s,border-color .2s;
+}
+.theme-toggle:hover,.theme-toggle:focus-visible{color:#fff;border-color:#2dd4bf}
+.theme-toggle svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.theme-toggle .icon-sun{display:none}
+[data-theme="dark"] .theme-toggle .icon-sun{display:block}
+[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+
+/* ===== MODE GELAP ===== */
+html{color-scheme:light}
+html[data-theme="dark"]{color-scheme:dark;--paper:#0f1523;--sand:#151c2d;--muted:#a9b3c7}
+body,.bg-sand,.card,.form-control{transition:background-color .25s,color .25s,border-color .25s}
+
+[data-theme="dark"] body{color:#e6e9f0}
+[data-theme="dark"] .text-secondary{color:#a9b3c7!important}
+[data-theme="dark"] .card{background-color:#1b2438;color:#e6e9f0;border-color:#2c3852}
+[data-theme="dark"] .form-control{background-color:#1b2438;color:#e6e9f0;border-color:#33405c}
+[data-theme="dark"] .form-control:focus{background-color:#1b2438;color:#e6e9f0;border-color:#2dd4bf;box-shadow:0 0 0 .2rem rgba(45,212,191,.2)}
+[data-theme="dark"] .skill-name{color:#f1f4fa}
+[data-theme="dark"] .year,
+[data-theme="dark"] .skill-group,
+[data-theme="dark"] .hero-info .hero-kicker,
+[data-theme="dark"] .nav-card .bi{color:#2dd4bf}
+[data-theme="dark"] .btn-outline-dark{color:#e6e9f0;border-color:#e6e9f0}
+[data-theme="dark"] .btn-outline-dark:hover,
+[data-theme="dark"] .btn-outline-dark:focus{background:#e6e9f0;color:#0f1523}
+[data-theme="dark"] .detail-img{border-color:#2c3852}
+[data-theme="dark"] .hero-intro{background:#151b2a;color:#f1f4fa}
+[data-theme="dark"] .hero-dark{background:#05080f}
+[data-theme="dark"] footer{background:#0a0f1b}
+
+@media (max-width:991.98px){
+  [data-theme="dark"] .hero-intro,
+  [data-theme="dark"] .hero-info{background:#05080f}
+}
+
+/* ===== Galeri dokumentasi: menyesuaikan otomatis jumlah & ukuran foto ===== */
+.galeri{column-width:280px;column-gap:1.5rem}
+.galeri figure{break-inside:avoid;margin:0 0 1.5rem}
+.galeri img{
+  width:100%;height:auto;display:block;
+  border-radius:.5rem;border:1px solid #e2e6ee;background:var(--sand);
+  cursor:zoom-in;transition:transform .2s,box-shadow .2s;
+}
+.galeri img:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(20,33,61,.15)}
+[data-theme="dark"] .galeri img{border-color:#2c3852}
+
+/* Tampilan foto diperbesar saat diklik */
+.lightbox{
+  position:fixed;inset:0;z-index:2000;
+  background:rgba(5,8,15,.92);
+  display:flex;align-items:center;justify-content:center;
+  padding:1.5rem;cursor:zoom-out;
+}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:100%;max-height:100%;border-radius:.5rem;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.lightbox button{position:absolute;top:1rem;right:1.25rem;background:none;border:0;color:#fff;font-size:2.25rem;line-height:1;cursor:pointer}
+
+/* ===== Video latar untuk judul halaman (tambahkan class "hero-video" pada <header>) ===== */
+.hero-video{position:relative;overflow:hidden;isolation:isolate}
+.hero-video-bg{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;            /* video memenuhi area dan menyesuaikan ukuran layar */
+  z-index:-2;
+}
+.hero-video-overlay{
+  position:absolute;inset:0;
+  background:rgba(0,0,0,.12);
+  z-index:-1;
+}
+.hero-video .container{text-shadow:0 2px 12px rgba(0,0,0,.65),0 0 2px rgba(0,0,0,.5)}
+
+/* Hormati pengguna yang mematikan animasi di perangkatnya */
+@media (prefers-reduced-motion:reduce){
+  .hero-video-bg{display:none}
+}
